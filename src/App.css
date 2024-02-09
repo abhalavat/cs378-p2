@@ -3,33 +3,6 @@
   Below, you can see an example of a class called "menu" that changes the color of the text to blue. Modify according to your needs.
 */
 
-#logo {
-  width: 80%;
-  margin: 8vh auto;
-}
-
-#slogan {
-  text-align: center;
-}
-
-#cursive {
-  font-family: cursive;
-  font-size: 1.3em;
-  color: #bc6f11;
-}
-
-#big-slogan {
-  font-size: 1.8em;
-}
-
-img {
-  width:100%;
-  min-height: 100%;
-  object-fit: cover;
-  border-radius: 20%;
-  margin: 0;
-}
-
 #list {
   margin: 5vh 2vw;
 }
