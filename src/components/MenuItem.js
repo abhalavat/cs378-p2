@@ -5,11 +5,11 @@ import './MenuItem.css';
 // Modify the component to take in all the other properties of a menu item you need and display them in the component.
 // Use bootstrap to style the elements so that it looks like the mockup in the assignment.
 // Hint: You can use the image name to get the image from the images folder.
-const MenuItem = ({ description, price, title, imageName, data }) => {
+const MenuItem = ({ data }) => {
     return (
         <div class="row item">
             <div class="col-4 img-container">
-                <img alt="Image of burrito" src={'../images/' + data.imageName}/>
+                <img alt="Image of burrito" src={'https://abhalavat.github.io/cs378-p2/images/' + data.imageName}/>
             </div>
             <div class="col-8">
                 <div class="row"><b>{data.title}</b></div>

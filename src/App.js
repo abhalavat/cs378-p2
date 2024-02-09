@@ -91,7 +91,7 @@ function App() {
       </div>
       <div id="list" className="row">
         {menuItems.map((menuItem) => (
-          <MenuItem data={menuItem} imageName={menuItem.imageName} title={menuItem.title} description={menuItem.description} price={menuItem.price}/>
+          <MenuItem data={menuItem}/>
         ))}
         {/* Display menu items dynamicaly here by iterating over the provided menuItems */}
       </div>
