@@ -82,10 +82,18 @@ const menuItems = [
 function App() {
   return (
     <div>
-      <h1>Menu</h1>
-      <div className="menu">
+      <div id="logo" class="row">
+        <img alt="Restaurant logo image" src="https://cdn.document360.io/logo/c0801247-912d-4a67-9c71-168236769bb1/34a495b4dfe141428b5ccb24f3e5de82-logo-Small.png"/>
+      </div>
+      <div id="slogan" class="row">
+        <div class="row" id="cursive"><p>Fancy food ready on campus!</p></div>
+        <div class="row" id="big-slogan"><p>Check out our UT menu!</p></div>
+      </div>
+      <div id="list" className="row">
+        {menuItems.map((menuItem) => (
+          <MenuItem data={menuItem} imageName={menuItem.imageName} title={menuItem.title} description={menuItem.description} price={menuItem.price}/>
+        ))}
         {/* Display menu items dynamicaly here by iterating over the provided menuItems */}
-        <MenuItem title={menuItems[0].title} /> {/* Example for how to use a component */}
       </div>
     </div>
   );

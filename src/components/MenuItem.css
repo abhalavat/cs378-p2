@@ -1,0 +1,22 @@
+img {
+    width:100%;
+    min-height: 100%;
+    object-fit: cover;
+    border-radius: 20%;
+    margin: 0;
+}
+
+.description-text {
+    color: rgba(0, 0, 0, 0.5);
+    margin: 0%;
+}
+
+.button {
+    border-radius: 40% / 50%;
+    box-shadow: 0 0.2vh 0.4vh rgba(0, 0, 0, 0.4);
+    border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.img-container {
+    padding: 2%;
+}
