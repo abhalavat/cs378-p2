@@ -88,7 +88,6 @@ function App() {
         {menuItems.map((menuItem) => (
           <MenuItem data={menuItem}/>
         ))}
-        {/* Display menu items dynamicaly here by iterating over the provided menuItems */}
       </div>
     </div>
   );
