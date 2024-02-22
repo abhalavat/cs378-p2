@@ -89,15 +89,11 @@ function App() {
   const [subtotal, setSubtotal] = useState(0)
 
   useEffect(() => {
-    setSubtotal(0)
-    console.log(quantities)
-    // for (let i = 0; i < quantities.length; i++) {
-    //     setSubtotal(subtotal + (quantities[i] * menuItems[i].price))
-    // }
     let total = 0;
     for (let i = 0; i < quantities.length; i++) {
-
+      total += quantities[i] * menuItems[i].price
     }
+    setSubtotal(total)
   }, quantities)
 
   function updateQuantity(add, id) {
