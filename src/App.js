@@ -123,7 +123,7 @@ function App() {
           <MenuItem data={menuItem} quantities={quantities} update={updateQuantity}/>
         ))}
       </div>
-      <Footer update={clearAll} subtotal={subtotal}/>
+      <Footer update={clearAll} subtotal={subtotal} quantities={quantities} data={menuItems}/>
     </div>
   );
 }
