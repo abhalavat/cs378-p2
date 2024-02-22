@@ -1,8 +1,11 @@
 import './App.css';
 import MenuItem from './components/MenuItem';
 import Header from './components/Header';
+import Footer from './components/Footer';
+import { useState, useEffect } from 'react';
 
 import 'bootstrap/dist/css/bootstrap.min.css'; // This imports bootstrap css styles. You can use bootstrap or your own classes by using the className attribute in your elements.
+import { clear } from '@testing-library/user-event/dist/clear';
 
 // Menu data. An array of objects where each object represents a menu item. Each menu item has an id, title, description, image name, and price.
 // You can use the image name to get the image from the images folder.
@@ -81,14 +84,50 @@ const menuItems = [
 
 
 function App() {
+
+  const [quantities, setQuantities] = useState([0, 0, 0, 0, 0, 0, 0, 0, 0, 0])
+  const [subtotal, setSubtotal] = useState(0)
+
+  useEffect(() => {
+    setSubtotal(0)
+    console.log(quantities)
+    // for (let i = 0; i < quantities.length; i++) {
+    //     setSubtotal(subtotal + (quantities[i] * menuItems[i].price))
+    // }
+    let total = 0;
+    for (let i = 0; i < quantities.length; i++) {
+
+    }
+  }, quantities)
+
+  function updateQuantity(add, id) {
+    if (add) {
+      let newState = [...quantities]
+      newState[id - 1] = quantities[id - 1] + 1
+      setQuantities(newState)
+    } else {
+      if(quantities[id-1] != 0) {
+        let newState = [...quantities]
+        newState[id - 1] = quantities[id - 1] - 1
+        setQuantities(newState)
+      }
+    }
+  }
+
+  function clearAll() {
+    let newState = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+    setQuantities(newState)
+  }
+
   return (
     <div>
       <Header/>
       <div id="list" className="row">
         {menuItems.map((menuItem) => (
-          <MenuItem data={menuItem}/>
+          <MenuItem data={menuItem} quantities={quantities} update={updateQuantity}/>
         ))}
       </div>
+      <Footer update={clearAll} subtotal={subtotal}/>
     </div>
   );
 }
