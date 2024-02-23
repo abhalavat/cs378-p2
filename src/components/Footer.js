@@ -10,8 +10,8 @@ const Header = ({ update, subtotal, quantities, data }) => {
     return (
         <div id="container">
             <div class="row">
-                <div class="col-8">Subtotal: {subtotal}</div>
-                <div class="col-2"><button class="button" onClick={() => {
+                <div class="col-6">Subtotal: {subtotal}</div>
+                <div class="col-3"><button class="button" onClick={() => {
                     let count = 0
                     for (let i = 0; i < quantities.length; i++) {
                         count += quantities[i]
@@ -28,7 +28,7 @@ const Header = ({ update, subtotal, quantities, data }) => {
                         alert(message)
                     }
                 }}>Order</button></div>
-                <div class="col-2"><button class="button" onClick={update}>Clear</button></div>
+                <div class="col-3"><button class="button" onClick={update}>Clear</button></div>
             </div>
         </div>
     );
